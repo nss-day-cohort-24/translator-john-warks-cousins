@@ -1,3 +1,5 @@
 "use strict";
 
-console.log("hello");
+
+//console.log("hello world");
+let LangModule = require("./language");

@@ -1,5 +1,6 @@
 "use strict";
-let russia = require("./russia");
+
+let russia = require("./russian");
 let german = require("./german");
 let french = require("./french");
 let translator = {
