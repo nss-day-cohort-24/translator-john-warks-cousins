@@ -1,11 +1,12 @@
 "use strict";
+
 let russia = require("./russian");
-//let german = require("./german");
-//let french = require("./french");
+let german = require("./german");
+let french = require("./french");
 let translator = {
     russia,
-    //german,
-    //french
+    german,
+    french
 };
 
 module.exports = translator;
