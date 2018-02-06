@@ -11,4 +11,20 @@ let translator = {
     spanish
 };
 
+
+document.getElementById("btn-trans").addEventListener("click", function(){
+    var x = document.getElementById("langOptions").selectedIndex;
+    console.log("click", x, document.getElementsByTagName("option")[x].value);
+    
+        if (document.getElementsByTagName("option")[x].value === 'french'){
+            console.log('got here');
+            translator.french(document.getElementById("text-field").value);
+    }
+});
+// document.getElementById("btn-trans").addEventListener("click", function(){
+//     if (document.getElementsByTagName("option")[x].value === 'spanish') {
+//         console.log(translator.spanish);
+//         return translator.spanish;
+//     }
+// });
 module.exports = translator;

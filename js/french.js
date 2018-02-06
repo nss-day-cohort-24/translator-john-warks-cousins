@@ -1,19 +1,20 @@
 "use strict";
 console.log("Let's translate to french!");
-var frenchLang = {"merry":"joyeux", "christmas":"noel", "and":"et", "happy":"bonne", "new year":"année"};
-var text = document.getElementById("text-field");
-var translate = document.getElementById("translation");
+var frenchLang = {merry:"joyeux", christmas:"noel", and:"et", happy:"bonne", newyear:"année"};
+// var text = document.getElementById("text-field");
+// var translate = document.getElementById("translation");
 
-function translateTo(french){
+function frenchTranslator(words){
+    console.log("words", words);
     for (let item in frenchLang){
-        if (text.value === item){
-            console.log(text.value);
-            translate.innerHTML = frenchLang[item];
+        if (words == item){
+            console.log(frenchLang[`${item}`]);
+            document.getElementById("translation").innerHTML = frenchLang[`${item}`];
         }
     }
 }
 
-module.exports = translateTo(frenchLang);
+module.exports = frenchTranslator;
 
 // function french(){
 //     return french;
