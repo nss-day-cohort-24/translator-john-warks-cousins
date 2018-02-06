@@ -8,6 +8,8 @@ var frenchLang = {
     new: "nouveau",
     year:"année"};
 
+// var phrase = [getElementById("text-field").split("");];
+// console.log(phrase);
 
 function frenchTranslator(words){
     let phrase = words.split(" ");

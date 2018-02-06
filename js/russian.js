@@ -1,4 +1,4 @@
-"use strict"
+"use strict";
 console.log("Let's translate to russian!");
 var russianLang = {
     merry:"veselly", 
