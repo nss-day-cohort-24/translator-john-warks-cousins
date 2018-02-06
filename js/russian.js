@@ -1,18 +1,28 @@
-"use strict";
-console.log("hello russia");
-var russiaLang = {"merry":"veselly", "christmas":"rozhdestvo", "and":"a takzhe", "happy":"schastlivyy", "new":"novyy", "year":"god"};
+"use strict"
+console.log("Let's translate to russian!");
+var russianLang = {
+    merry:"veselly", 
+    christmas:"rozhdestvo", 
+    and:"a takzhe", 
+    happy:"schastlivyy", 
+    new: "novyy",
+    year:"god"};
 
-var text = document.getElementById("text-field");
-var translate = document.getElementById("translation");
 
-function translateTo(russian){
-    for (let item in russiaLang){
-        if (text.value === item){
-            console.log(text.value);
-            translate.innerHTML = russiaLang[item];
+function russianTranslator(words){
+    let phrase = words.split(" ");
+    for (let item in phrase){
+        if (item === russianLang[`${item}`]){
+            console.log(item, phrase);
+        }
+    }
+    console.log(words, phrase);
+    for (let item in russianLang){
+        if (phrase == item){
+            console.log(words, phrase);
+            document.getElementById("translation").innerHTML = russianLang[`${item}`];
         }
     }
 }
 
-
-module.exports = translateTo(russiaLang);
+module.exports = russianTranslator;
