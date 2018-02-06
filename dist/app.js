@@ -35,27 +35,41 @@ module.exports = translateTo(frenchLang);
 },{}],2:[function(require,module,exports){
 "use strict";
 
-function german() {
-    return german;
+var germanLang = {"merry":"fröhlich", "Christmas":"Weihnachten", "and":"und", "happy":"glücklich", 
+"new":"neu", "my":"meine", "friend":"Freund"}; 
+
+var text = document.getElementById("text-field");
+var translate = document.getElementById("translation");
+
+function translateTo(german){
+    for (let item in germanLang){
+        if (text.value == item){
+            console.log(text.value);
+            translate.innerHTML = germanLang[item];
+        }
+    }
 }
 
 
 
-module.exports = german;
+
+module.exports = translateTo(germanLang);
 },{}],3:[function(require,module,exports){
 "use strict";
 
 let russia = require("./russian");
 let german = require("./german");
 let french = require("./french");
+let spanish = require("./spanish");
 let translator = {
     russia,
     german,
-    french
+    french,
+    spanish
 };
 
 module.exports = translator;
-},{"./french":1,"./german":2,"./russian":5}],4:[function(require,module,exports){
+},{"./french":1,"./german":2,"./russian":5,"./spanish":6}],4:[function(require,module,exports){
 "use strict";
 
 
@@ -81,4 +95,25 @@ function translateTo(russian){
 
 
 module.exports = translateTo(russiaLang);
+},{}],6:[function(require,module,exports){
+"use strict";
+
+console.log("hola mundo");
+
+var spanishLang = {"merry":"alegre", "christmas":"Navidad", "and":"y", "happy":"contento", "new":"nuevo", "year":"año"};
+
+var text = document.getElementById("text-field");
+var translate = document.getElementById("translation");
+
+function translateTo(spanish){
+    for (let item in spanishLang){
+        if (text.value === item){
+            console.log(text.value);
+            translate.innerHTML = spanishLang[item];
+        }
+    }
+}
+
+
+module.exports = translateTo(spanishLang);
 },{}]},{},[4]);
