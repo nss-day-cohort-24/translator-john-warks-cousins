@@ -1,4 +1,4 @@
-"use strict"
+"use strict";
 console.log("Let's translate to german!");
 var germanLang = {
     merry:"fröhlich", 
