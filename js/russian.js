@@ -1,6 +1,6 @@
 "use strict";
 console.log("hello russia");
-var russiaLang = {"merry":"veselly", "christmas":"rozhdestvo", "and":"a takzhe", "happy":"schastlivyy", "new":"novyy", "year":"god"}
+var russiaLang = {"merry":"veselly", "christmas":"rozhdestvo", "and":"a takzhe", "happy":"schastlivyy", "new":"novyy", "year":"god"};
 
 var text = document.getElementById("text-field");
 var translate = document.getElementById("translation");
@@ -15,4 +15,4 @@ function translateTo(russian){
 }
 
 
-module.exports = translateTo(russian);
+module.exports = translateTo(russiaLang);

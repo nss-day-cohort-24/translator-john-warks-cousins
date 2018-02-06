@@ -2,7 +2,7 @@
 
 console.log("hola mundo");
 
-var spanishLang = {"merry":"alegre", "christmas":"Navidad", "and":"y", "happy":"contento", "new":"nuevo", "year":"año"}
+var spanishLang = {"merry":"alegre", "christmas":"Navidad", "and":"y", "happy":"contento", "new":"nuevo", "year":"año"};
 
 var text = document.getElementById("text-field");
 var translate = document.getElementById("translation");
@@ -17,4 +17,4 @@ function translateTo(spanish){
 }
 
 
-module.exports = translateTo(spanish);
+module.exports = translateTo(spanishLang);
