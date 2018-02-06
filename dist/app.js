@@ -6,10 +6,16 @@ var frenchLang = {merry:"joyeux", christmas:"noel", and:"et", happy:"bonne", new
 // var translate = document.getElementById("translation");
 
 function frenchTranslator(words){
-    console.log("words", words);
+    let phrase = words.split(" ");
+    for (let item in phrase){
+        if (item === frenchLang[`${item}`]){
+            console.log(item, phrase);
+        }
+    }
+    console.log(words, phrase);
     for (let item in frenchLang){
-        if (words == item){
-            console.log(frenchLang[`${item}`]);
+        if (phrase == item){
+            console.log(words, phrase);
             document.getElementById("translation").innerHTML = frenchLang[`${item}`];
         }
     }
@@ -75,7 +81,6 @@ document.getElementById("btn-trans").addEventListener("click", function(){
     console.log("click", x, document.getElementsByTagName("option")[x].value);
     
         if (document.getElementsByTagName("option")[x].value === 'french'){
-            console.log('got here');
             translator.french(document.getElementById("text-field").value);
     }
 });

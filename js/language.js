@@ -17,7 +17,6 @@ document.getElementById("btn-trans").addEventListener("click", function(){
     console.log("click", x, document.getElementsByTagName("option")[x].value);
     
         if (document.getElementsByTagName("option")[x].value === 'french'){
-            console.log('got here');
             translator.french(document.getElementById("text-field").value);
     }
 });
